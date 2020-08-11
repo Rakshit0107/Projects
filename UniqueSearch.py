@@ -6,9 +6,9 @@ def clicked():
 	name.replace(" ","+")
 	if var.get()==1:
 		web.open_new_tab("https://www.google.com/search?q={}".format(name))
-	if var.get()==3:
+	elif var.get()==3:
 		web.open_new_tab("https://www.amazon.com/s?k={}".format(name))
-	elif var.get()==2:
+	else:
 		web.open_new_tab("https://en.wikipedia.org/wiki/{}".format(name))
 
 window = tk.Tk()
@@ -16,7 +16,7 @@ window.title("Unique Search")
 window.geometry("500x200")
 
 l = tk.Label(window,text="Enter to search   ", font = "arial 15")
-l2 = tk.Label(window,text="Enter Location   ", font= "arial 15")
+l2 = tk.Label(window,text="Click on the website   ", font= "arial 15")
 
 e = tk.Entry(window,width = 30)#height =10)
 var = tk.IntVar()
